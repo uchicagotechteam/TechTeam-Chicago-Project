@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to our app!</h2>
+  <p>
+    Please type the name of the disease you want to look up in this search bar!
+  </p>
+
+
+  <button [navPush]="newpagePage" >Go To New Page</button>
+
+  <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click) = "GotoNewPage(item)">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

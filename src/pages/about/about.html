@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<p> Who win? Who's next? </p>
+<p></p>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label (click)="countcheckbox()">Albert Einstein </ion-label>
+    <ion-checkbox color="dark" checked="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label (click)="countcheckbox()">Stephen Hawking</ion-label>
+    <ion-checkbox disabled="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label (click)="countcheckbox()">Issac Newton</ion-label>
+    <ion-checkbox color="dark"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label (click)="countcheckbox()">Nikola Tesla</ion-label>
+    <ion-checkbox color="red"></ion-checkbox>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label (click)="countcheckbox()">{{count}}</ion-label>
+
+  </ion-item>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
