@@ -5,7 +5,7 @@ How to run the app:
 
 ### ionic serve 
 
-you might havr to run if you run into an error trying to serve the app 
+you might have to run if you run into an error trying to serve the app 
 
 ### npm rebuild node-sass --force
 
