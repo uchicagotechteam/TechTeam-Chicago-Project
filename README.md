@@ -12,5 +12,7 @@ you might have to run if you run into an error trying to serve the app
 Create an iOS app with
 
 `npm install -g ios-deploy`
+
 `ionic cordova build ios`
+
 `ionic cordova run ios --device`
