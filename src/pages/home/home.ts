@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {NewpagePage} from '../newpage/newpage';
+import { NewpagePage } from '../newpage/newpage';
+import { HTTP } from '@ionic-native/http';
+
 
 @Component({
   selector: 'page-home',
@@ -10,8 +12,20 @@ export class HomePage {
   newpagePage = NewpagePage;
   searchQuery: string = '';
   items: string[];
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public http: HTTP) {
       this.initializeItems();
+      this.http.get('assets/data.json', {}, {})
+        .then(data => {
+          console.log("works");
+          console.log(data);
+        })
+        .catch(error => {
+          console.log("fails");
+          console.log(error.status);
+          console.log(error.error); // error message as string
+          console.log(error.headers);
+
+        });
 
 
 
@@ -24,7 +38,6 @@ export class HomePage {
       'Bogota',
       'Venice',
       'Paris'
-
 
     ];
   }
