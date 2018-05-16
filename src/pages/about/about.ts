@@ -12,43 +12,76 @@ export class AboutPage {
   items: string[];
 
   constructor(public navCtrl: NavController) {
-    this.initializeItems();
-  }
-
-  public count = 0
-
-
-  countcheckbox() {
-    this.count = this.count + 1
-
-  }
-
-  initializeItems() {
-    this.items = [
-      'Amsterdam',
-      'Bogota',
-      'Venice',
-      'Paris'
-
-
-    ];
-  }
-
-  getItems(ev: any) {
-    // Reset items back to all of the items
-    this.initializeItems();
-
-    // set val to the value of the searchbar
-    let val = ev.target.value;
-
-    // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) == 0);
-      })
-    this.items = this.items.sort()
-    }
+    // this.initializeItems();
   }
 }
 
+window.onload = nodeList; // loads the nodeList upon window load
+
+function hiliteMe() { // highlights the name of the play when moused over
+    var hilite = event.currentTarget;
+    hilite.className = "hilite";
+}
+
+function unhiliteMe() { // unhighlights the name of the play when moused off
+    var unhilite = event.currentTarget;
+    unhilite.className = "unhilite";
+}
+
+function togglePlotSum() { // shows or hides the summaries for each play upon mouse click
+    var playid = this.id;
+
+    var play1 = document.getElementById("romeo_plot");
+    var play2 = document.getElementById("hamlet_plot");
+    var play3 = document.getElementById("much_plot");
+    var play4 = document.getElementById("temp_plot");
+
+    switch (playid) { // switches on each plot id and makes summary visible if hidden and hidden if visible
+            case "romeo":
+                if (play1.className === "hidden") {
+                    play1.className = "show";
+                }
+                else if (play1.className === "show") {
+                    play1.className = "hidden"; 
+                }
+                break;
+
+            case "hamlet":
+                if (play2.className === "hidden") {
+                    play2.className = "show";
+                }
+                else if (play2.className === "show") {
+                    play2.className = "hidden"; 
+                }
+                break;
+
+            case "much":
+                if (play3.className === "hidden") {
+                    play3.className = "show";
+                }
+                else if (play3.className === "show") {
+                    play3.className = "hidden";
+                }
+            break;
+
+            case "temp":
+                if (play4.className === "hidden") {
+                    play4.className = "show";
+                }
+                else if (play4.className === "show") {
+                    play4.className = "hidden";
+                }
+            break;
+        }
+    }
+
+function nodeList() {  // creates nodeList and event listeners
+    var header = document.getElementsByClassName("playheader"); // gets elements with class "playheader"
+    for (var i = 0; i < header.length; i++) {
+        var play = header[i];
+        play.addEventListener("mouseover", hiliteMe, false);
+        play.addEventListener("mouseout", unhiliteMe, false);
+        play.addEventListener("click", togglePlotSum, false);
+    }
+}
 
