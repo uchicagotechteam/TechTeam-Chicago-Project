@@ -7,21 +7,21 @@ import { HTTP } from '@ionic-native/http';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   newpagePage = NewpagePage;
   searchQuery: string = '';
   items: string[];
+  allItems: string[];
+
   constructor(public navCtrl: NavController, public http: HTTP) {
-      this.initializeItems();
       this.http.get('assets/data.json', {}, {})
         .then(data => {
-          var datafile = JSON.parse(data.data);
-          console.log("work");
+          console.log("succ1");
+          this.allItems = Object.keys(JSON.parse(data.data)["data"]["diseases"]);
 
-         // var json = JSON.stringify(data.data);
-          console.log(datafile);
-
-          //console.log(datafile);
+          console.log("succ2");
+          this.items = this.allItems.sort();
         })
         .catch(error => {
           console.log("fails");
@@ -32,24 +32,12 @@ export class HomePage {
         });
 
 
-
-  }
-
-
-  initializeItems() {
-    this.items = [
-      'Amsterdam',
-      'Bogota',
-      'Venice',
-      'Paris'
-
-    ];
   }
 
 
   getItems(ev: any) {
     // Reset items back to all of the items
-    this.initializeItems();
+    this.items = this.allItems;
 
     // set val to the value of the searchbar
     let val = ev.target.value;
