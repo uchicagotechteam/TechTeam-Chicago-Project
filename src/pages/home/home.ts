@@ -3,7 +3,6 @@ import { NavController } from 'ionic-angular';
 import { NewpagePage } from '../newpage/newpage';
 import { HTTP } from '@ionic-native/http';
 
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -16,8 +15,13 @@ export class HomePage {
       this.initializeItems();
       this.http.get('assets/data.json', {}, {})
         .then(data => {
-          console.log("works");
-          console.log(data);
+          var datafile = JSON.parse(data.data);
+          console.log("work");
+
+         // var json = JSON.stringify(data.data);
+          console.log(datafile);
+
+          //console.log(datafile);
         })
         .catch(error => {
           console.log("fails");

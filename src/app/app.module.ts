@@ -16,6 +16,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HTTP } from '@ionic-native/http';
 
 
+import 'rxjs/Rx';
+
+
 @NgModule({
   declarations: [
     MyApp,

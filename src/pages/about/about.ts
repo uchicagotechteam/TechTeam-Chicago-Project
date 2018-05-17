@@ -18,15 +18,6 @@ export class AboutPage {
 
 window.onload = nodeList; // loads the nodeList upon window load
 
-function hiliteMe() { // highlights the name of the play when moused over
-    var hilite = event.currentTarget;
-    hilite.className = "hilite";
-}
-
-function unhiliteMe() { // unhighlights the name of the play when moused off
-    var unhilite = event.currentTarget;
-    unhilite.className = "unhilite";
-}
 
 function togglePlotSum() { // shows or hides the summaries for each play upon mouse click
     var playid = this.id;
@@ -42,7 +33,7 @@ function togglePlotSum() { // shows or hides the summaries for each play upon mo
                     play1.className = "show";
                 }
                 else if (play1.className === "show") {
-                    play1.className = "hidden"; 
+                    play1.className = "hidden";
                 }
                 break;
 
@@ -51,7 +42,7 @@ function togglePlotSum() { // shows or hides the summaries for each play upon mo
                     play2.className = "show";
                 }
                 else if (play2.className === "show") {
-                    play2.className = "hidden"; 
+                    play2.className = "hidden";
                 }
                 break;
 
@@ -79,8 +70,7 @@ function nodeList() {  // creates nodeList and event listeners
     var header = document.getElementsByClassName("playheader"); // gets elements with class "playheader"
     for (var i = 0; i < header.length; i++) {
         var play = header[i];
-        play.addEventListener("mouseover", hiliteMe, false);
-        play.addEventListener("mouseout", unhiliteMe, false);
+
         play.addEventListener("click", togglePlotSum, false);
     }
 }
