@@ -1,7 +1,8 @@
 # TechTeam-Chicago-Project
 > Mobile app for Chicago Department Health
 
-How to run the app:
+
+`git clone https://github.com/JiaqiGao/TechTeam-Chicago-Project.git`
 
 `ionic serve`
 
