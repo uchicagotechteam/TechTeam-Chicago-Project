@@ -185,7 +185,6 @@ var HomePage = /** @class */ (function () {
         this.http = http;
         this.newpagePage = __WEBPACK_IMPORTED_MODULE_2__newpage_newpage__["a" /* NewpagePage */];
         this.searchQuery = '';
-        console.log("okay this loads");
         this.parser = {
             "data": {
                 "diseases": {
@@ -920,18 +919,12 @@ var HomePage = /** @class */ (function () {
             }
         };
         this.allItems = Object.keys(this.parser["data"]["diseases"]);
-        console.log("succ2");
         this.items = this.allItems.sort();
-        this.items.push("test");
         /*
         this.http.get('assets/data.json', {}, {})
           .then(data => {
-            console.log("succ1");
             this.allItems = Object.keys(JSON.parse(data.data)["data"]["diseases"]);
-    
-            console.log("succ2");
             this.items = this.allItems.sort();
-            this.items.push("test");
           })
           .catch(error => {
             console.log("fails");
@@ -957,16 +950,18 @@ var HomePage = /** @class */ (function () {
     };
     HomePage.prototype.GotoNewPage = function (item) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__newpage_newpage__["a" /* NewpagePage */], {
-            disease: item
+            disease: item,
+            data: this.parser
         });
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Chicago Dept. of Health</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Information on reporting</h2>\n  <p>\n    Search Disease\n  </p>\n\n\n\n  <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click) = "GotoNewPage(item)">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */]) === "function" && _b || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -993,31 +988,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NewpagePage = /** @class */ (function () {
-    function NewpagePage(navCtrl, navParams, http) {
+    function NewpagePage(navCtrl, navParams, http, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.http = http;
-        this.disease = navParams.get('disease');
+        this.toastCtrl = toastCtrl;
+        this.parser = navParams.get('data');
+        this.name = navParams.get('disease');
+        console.log(this.parser["data"]);
+        this.alt_names = this.parser["data"]["diseases"][this.name]["alt_names"];
+        this.urgency = this.parser["data"]["urgency_levels"][this.parser["data"]["diseases"][this.name]["urgency_i"]];
+        if (this.parser["data"]["diseases"][this.name]["submit_to_lab"] == 1) {
+            this.submit_to_lab = "IDPH requires an isolate or clinical materials be submitted to the IDPH laboratory (2121 W. Taylor St. Chicago, IL, 60612, 312-793-1322";
+        }
+        else {
+            this.submit_to_lab = "N/A";
+        }
+        this.phone_number = this.parser["data"]["phone_numbers"][this.parser["data"]["diseases"][this.name]["phone_number_i"]];
+        if (this.urgency == "Immediate (within 3 hours by phone)") {
+            this.nonurgent_reporting_method = "Reports can be made electronically via I-NEDSS or by mail, telephone, or fax; contact corresponding program for disease specific reporting requirements.";
+        }
+        /*
         this.http.get('assets/data.json', {}, {})
-            .then(function (data) {
-            console.log("works");
+          .then(data => {
+    
             console.log(data["data"]);
-        })
-            .catch(function (error) {
+          })
+          .catch(error => {
             console.log("fails");
             console.log(error.status);
             console.log(error.error); // error message as string
             console.log(error.headers);
-        });
+    
+          });
+        */
     }
+    NewpagePage.prototype.afterHoursToast = function () {
+        var toast = this.toastCtrl.create({
+            message: 'On weekends, holidays, or after hours, call 311 and ask for the communicable disease physician on call.',
+            showCloseButton: true,
+            closeButtonText: 'Ok'
+        });
+        toast.present();
+    };
+    NewpagePage.prototype.labReqsToast = function () {
+        var toast = this.toastCtrl.create({
+            message: 'On weekends, holidays, or after hours, call 311 and ask for the communicable disease physician on call.',
+            showCloseButton: true,
+            closeButtonText: 'Ok'
+        });
+        toast.present();
+    };
+    NewpagePage.prototype.legalToast = function () {
+        var toast = this.toastCtrl.create({
+            message: 'Per the Control of Communicable Disease Code of Illinois, it is the responsibility of physicians, physician assistants, nurses, nurse aides or any other person having knowledge of any of the following diseases, confrmed or suspected, to report the case to the Chicago Department of Public Health (CDPH) within the number or hours or days indicated. This information is reportable by law and allowed by HIPAA CFR §164 512(b).',
+            showCloseButton: true,
+            closeButtonText: 'Ok'
+        });
+        toast.present();
+    };
     NewpagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-newpage',template:/*ion-inline-start:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>New Page</ion-list-header>\n    <ion-item>\n\n      {{disease}}\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/,
+            selector: 'page-newpage',template:/*ion-inline-start:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid padding>\n    <ion-row padding id="urgency">\n      <b>{{name}} <br>\n      Urgency {{urgency}}</b>\n    </ion-row>\n\n    <ion-row padding id="steps"><b>\n      {{nonurgent_reporting_method}} <br>\n      Steps: <br>\n      <ul>\n        <li>{{phone_number}} </li>\n        <li *ngIf="submit_to_lab != \'N/A\'"> {{submit_to_lab}} </li>\n      </ul></b>\n    </ion-row>\n\n    <ion-row padding id="altnames"><b>\n      Alternate names: {{alt_names}}\n    </b>\n    </ion-row>\n\n    <ion-row id="popups">\n      <button color ="button" ion-button full (click)="afterHoursToast()"> After hours information </button>\n      <!-- <button color ="button" ion-button full (click)="labReqsToast()"> Lab requirements </button> -->\n      <button color ="button" ion-button full (click)="legalToast()"> Does HIPAA allow this? </button>\n      <!-- <button color ="button" ion-button full (click)="showToastWithCloseButton()"> Option 2 </button> -->\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */]) === "function" && _d || Object])
     ], NewpagePage);
     return NewpagePage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=newpage.js.map

@@ -790,7 +790,8 @@ export class HomePage {
 
   GotoNewPage(item) {
     this.navCtrl.push(NewpagePage, {
-      disease: item
+      disease: item,
+      data: this.parser
     });
   }
 
