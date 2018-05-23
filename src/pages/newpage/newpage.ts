@@ -35,6 +35,10 @@ export class NewpagePage {
       this.nonurgent_reporting_method = "Reports can be made electronically via I-NEDSS or by mail, telephone, or fax; contact corresponding program for disease specific reporting requirements."
     }
 
+    for (var i=1; i<this.alt_names.length; i++){
+      this.alt_names[i] = " "+ this.alt_names[i];
+    }
+
     /*
     this.http.get('assets/data.json', {}, {})
       .then(data => {
