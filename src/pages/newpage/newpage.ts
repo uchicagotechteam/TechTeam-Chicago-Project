@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http';
 import { ToastController } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
 
 
 @Component({
@@ -19,10 +20,10 @@ export class NewpagePage {
 
 
   public disease: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HTTP, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HTTP, public toastCtrl: ToastController, private callNumber: CallNumber) {
     this.parser = navParams.get('data');
     this.name = navParams.get('disease');
-    console.log(this.parser["data"]);
+
     this.alt_names = this.parser["data"]["diseases"][this.name]["alt_names"];
     this.urgency = this.parser["data"]["urgency_levels"][this.parser["data"]["diseases"][this.name]["urgency_i"]];
     if (this.parser["data"]["diseases"][this.name]["submit_to_lab"] == 1){
@@ -39,6 +40,7 @@ export class NewpagePage {
       this.alt_names[i] = " "+ this.alt_names[i];
     }
 
+
     /*
     this.http.get('assets/data.json', {}, {})
       .then(data => {
@@ -53,6 +55,20 @@ export class NewpagePage {
 
       });
     */
+  }
+
+  callingNumber(telephoneNumber) {
+    this.callNumber.isCallSupported()
+      .then(function (response) {
+        if (response == true) {
+          console.log("worked");
+          this.callNumber.callNumber(telephoneNumber, true);
+
+        }
+        else {
+          // do nothing
+        }
+      });
   }
 
   afterHoursToast() {

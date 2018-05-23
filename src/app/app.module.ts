@@ -14,6 +14,7 @@ import { NewpagePage } from "../pages/newpage/newpage";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HTTP } from '@ionic-native/http';
+import { CallNumber } from '@ionic-native/call-number';
 
 
 import 'rxjs/Rx';
@@ -45,6 +46,7 @@ import 'rxjs/Rx';
     StatusBar,
     SplashScreen,
     HTTP,
+    CallNumber,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -17,7 +17,7 @@
       {{nonurgent_reporting_method}} <br>
       Steps: <br>
       <ul>
-        <li>{{phone_number}} </li>
+        <li (click)="callingNumber(phone_number)">{{phone_number}} </li>
         <li *ngIf="submit_to_lab != 'N/A'"> {{submit_to_lab}} </li>
       </ul></b>
     </ion-row>

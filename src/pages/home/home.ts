@@ -13,6 +13,7 @@ export class HomePage {
   searchQuery: string = '';
   items: string[];
   allItems: string[];
+  includeAltNames: any[];
   parser: any;
 
   constructor(public navCtrl: NavController, public http: HTTP) {
@@ -114,7 +115,7 @@ export class HomePage {
               "phone_number_i": 0,
               "submit_to_lab": 0
             },
-            "BrucellosisI": {
+            "Brucellosis (Bioterrorism)": {
               "alt_names": [
                 "Brucellosis",
                 "Brucellosis bioterrorism",
@@ -126,7 +127,7 @@ export class HomePage {
               "phone_number_i": 0,
               "submit_to_lab": 1
             },
-            "Q-feverI": {
+            "Q-fever (Bioterrorism)": {
               "alt_names": [
                 "Q-fever",
                 "Q-fever bioterrorism",
@@ -138,7 +139,7 @@ export class HomePage {
               "phone_number_i": 0,
               "submit_to_lab": 1
             },
-            "TularemiaI": {
+            "Tularemia (Bioterrorism)": {
               "alt_names": [
                 "Tularemial",
                 "Tularemial bioterrorism",
@@ -150,7 +151,7 @@ export class HomePage {
               "phone_number_i": 0,
               "submit_to_lab": 1
             },
-            "Q-fever24": {
+            "Q-fever": {
               "alt_names": [
                 "Q-fever"
               ],
@@ -158,7 +159,7 @@ export class HomePage {
               "phone_number_i": 0,
               "submit_to_lab": 1
             },
-            "Tularemia24": {
+            "Tularemia": {
               "alt_names": [
                 "Tularemia"
               ],
@@ -166,7 +167,7 @@ export class HomePage {
               "phone_number_i": 0,
               "submit_to_lab": 1
             },
-            "Brucellosis24": {
+            "Brucellosis": {
               "alt_names": [
                 "Brucellosis"
               ],
@@ -750,6 +751,14 @@ export class HomePage {
         }
       };
     this.allItems = Object.keys(this.parser["data"]["diseases"]);
+    this.includeAltNames = [];
+    for (var i=0; i<this.allItems.length; i++){
+      var disease = [];
+      for (var j=0; j<this.parser["data"]["diseases"][this.allItems[i]]["alt_names"].length; j++){
+        disease.push(this.parser["data"]["diseases"][this.allItems[i]]["alt_names"][j]);
+      }
+      this.includeAltNames.push(disease);
+    }
     this.items = this.allItems.sort();
 
     /*

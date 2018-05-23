@@ -27,6 +27,9 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "ChicagoMedReport"
+        },
+        "mx.ferreyra.callnumber": {
+            "PACKAGE_NAME": "ChicagoMedReport"
         }
     },
     "dependent_plugins": {
