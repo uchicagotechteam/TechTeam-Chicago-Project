@@ -16,7 +16,6 @@ export class HomePage {
   parser: any;
 
   constructor(public navCtrl: NavController, public http: HTTP) {
-      console.log("okay this loads");
       this.parser = {
         "data": {
           "diseases": {
@@ -751,21 +750,13 @@ export class HomePage {
         }
       };
     this.allItems = Object.keys(this.parser["data"]["diseases"]);
-
-    console.log("succ2");
     this.items = this.allItems.sort();
-    this.items.push("test");
-
 
     /*
     this.http.get('assets/data.json', {}, {})
       .then(data => {
-        console.log("succ1");
         this.allItems = Object.keys(JSON.parse(data.data)["data"]["diseases"]);
-
-        console.log("succ2");
         this.items = this.allItems.sort();
-        this.items.push("test");
       })
       .catch(error => {
         console.log("fails");
