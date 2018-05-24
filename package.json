@@ -45,7 +45,8 @@
         "package.json": "^2.0.1",
         "rxjs": "^5.5.8",
         "sw-toolbox": "3.6.0",
-        "zone.js": "0.8.26"
+        "zone.js": "0.8.26",
+        "mx.ferreyra.callnumber": "~0.0.2"
     },
     "devDependencies": {
         "@ionic/app-scripts": "3.1.8",
