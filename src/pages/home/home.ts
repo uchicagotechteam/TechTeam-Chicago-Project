@@ -795,11 +795,8 @@ export class HomePage {
         return (item.toLowerCase().indexOf(val.toLowerCase()) == 0);
       })
       this.items = this.items.sort();
-      this.items.splice(this.items.indexOf("Any Public Health Hazard"), 1);
-      this.items.unshift("Any Public Health Hazard");
     }
   }
-
 
 
   GotoNewPage(item) {
