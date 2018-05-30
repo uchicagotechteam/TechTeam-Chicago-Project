@@ -188,9 +188,9 @@ var HomePage = /** @class */ (function () {
         this.parser = {
             "data": {
                 "diseases": {
-                    "Public Health Hazard": {
+                    "Any Public Health Hazard": {
                         "alt_names": [
-                            "Public Health Hazard",
+                            "Any Public Health Hazard",
                             "Any unusual case or cluster of cases that may indicate a public health hazard",
                             "MERS-CoV",
                             "Ebola Virus Disease",
@@ -928,6 +928,9 @@ var HomePage = /** @class */ (function () {
             this.includeAltNames.push(disease);
         }
         this.items = this.allItems.sort();
+        //puts public health hazard on top
+        this.items.splice(this.items.indexOf("Any Public Health Hazard"), 1);
+        this.items.unshift("Any Public Health Hazard");
         /*
         this.http.get('assets/data.json', {}, {})
           .then(data => {
@@ -954,6 +957,8 @@ var HomePage = /** @class */ (function () {
                 return (item.toLowerCase().indexOf(val.toLowerCase()) == 0);
             });
             this.items = this.items.sort();
+            this.items.splice(this.items.indexOf("Any Public Health Hazard"), 1);
+            this.items.unshift("Any Public Health Hazard");
         }
     };
     HomePage.prototype.GotoNewPage = function (item) {
@@ -966,9 +971,10 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Chicago Department of Health</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Information on reporting</h2>\n  <p>\n    Search Disease\n  </p>\n\n\n\n  <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="GotoNewPage(item)">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Jiaqi/salad/TechTeam-Chicago-Project/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */]) === "function" && _b || Object])
     ], HomePage);
     return HomePage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=home.js.map

@@ -20,9 +20,9 @@ export class HomePage {
       this.parser = {
         "data": {
           "diseases": {
-            "Public Health Hazard": {
+            "Any Public Health Hazard": {
               "alt_names": [
-                "Public Health Hazard",
+                "Any Public Health Hazard",
                 "Any unusual case or cluster of cases that may indicate a public health hazard",
                 "MERS-CoV",
                 "Ebola Virus Disease",
@@ -760,6 +760,9 @@ export class HomePage {
       this.includeAltNames.push(disease);
     }
     this.items = this.allItems.sort();
+    //puts public health hazard on top
+    this.items.splice(this.items.indexOf("Any Public Health Hazard"), 1);
+    this.items.unshift("Any Public Health Hazard");
 
     /*
     this.http.get('assets/data.json', {}, {})
@@ -791,7 +794,9 @@ export class HomePage {
       this.items = this.items.filter((item) => {
         return (item.toLowerCase().indexOf(val.toLowerCase()) == 0);
       })
-      this.items = this.items.sort()
+      this.items = this.items.sort();
+      this.items.splice(this.items.indexOf("Any Public Health Hazard"), 1);
+      this.items.unshift("Any Public Health Hazard");
     }
   }
 
