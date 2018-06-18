@@ -1,5 +1,5 @@
 # TechTeam-Chicago-Project
-> Mobile app for Chicago Department Health
+> Mobile app for Chicago Department of Public Health
 
 Install Ionic
 
