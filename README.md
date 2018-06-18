@@ -21,4 +21,4 @@ Build the iOS  platform
 
 `$ ionic cordova build ios`
 
-Now you can test the app in an iOS simulator or testing it as a native app on XCode. 
+Now you can test the app in an iOS simulator or as a native app on XCode. 
