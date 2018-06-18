@@ -1,11 +1,24 @@
 # TechTeam-Chicago-Project
 > Mobile app for Chicago Department Health
 
-re-clone the repo 
+Install Ionic
 
-`git clone https://github.com/JiaqiGao/TechTeam-Chicago-Project.git`
+`$ sudo npm install -g ionic`
 
-run
+Configure iOS platform
 
-`ionic serve`
+`$ ionic cordova platform add ios`
 
+Clone this repo 
+
+`$ git clone https://github.com/JiaqiGao/TechTeam-Chicago-Project.git`
+
+Install the dependences
+
+`$ sudo npm install package.json`
+
+Build the iOS  platform
+
+`$ ionic cordova build ios``
+
+Now you can test the app in an iOS simulator or testing it as a native app on XCode. 
