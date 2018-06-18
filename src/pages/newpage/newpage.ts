@@ -9,6 +9,7 @@ import { CallNumber } from '@ionic-native/call-number';
   selector: 'page-newpage',
   templateUrl: 'newpage.html',
 })
+
 export class NewpagePage {
   parser: any;
   name: string;
@@ -58,6 +59,17 @@ export class NewpagePage {
   }
 
   callingNumber(telephoneNumber) {
+    const toast = this.toastCtrl.create({
+      message: 'call function working',
+      showCloseButton: true,
+      closeButtonText: 'Ok'
+    });
+    toast.present();
+    this.callNumber.callNumber("12123003021", true)
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
+    /*
+    console.log(telephoneNumber);
     this.callNumber.isCallSupported()
       .then(function (response) {
         if (response == true) {
@@ -69,6 +81,7 @@ export class NewpagePage {
           // do nothing
         }
       });
+      */
   }
 
   afterHoursToast() {
