@@ -60,7 +60,7 @@ var TabsPage = /** @class */ (function () {
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n</ion-tabs>\n'/*ion-inline-end:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -111,12 +111,11 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About the App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <h2>Health Insurance Portability and Accountability Act</h2>\n\n  <h1>About the App </h1>\n  <p>This is an app for healthcare providers to help them determine which diseases they are mandated to report</p>\n\n  <h2> About HIPPA </h2>\n  <p>Personal information, such as the patient’s medical issues, physical and mental conditions and medications they take, is considered confidential. Confidentiality can be broken only in cases where you must provide this information to medical personnel who will take over care, for mandatory reporting or in certain legal circumstances. </p>\n\n\n  <button ion-item (click)="onDescriptionClick()">\n    Description:\n    <ion-item *ngIf="descriptionClicked" text-wrap>\n      The Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule is the first comprehensive federal protection for the privacy of protected health information (PHI). It makes provisions for aspects such as patient control over health information, the use and release of health records, appropriate disclosure of health information, and civil and criminal penalties for violation of patients’ privacy rights.\n    </ion-item>\n  </button>\n\n  <button ion-item (click)="onProtectedClick()">\n    Protected Health Information:\n    <ion-item *ngIf="protectedClicked" text-wrap>\n      Because of these privacy stipulations, you cannot relay any identifying information about the patient to anyone without the patient’s specific consent. This includes media, employers, colleagues, friends and even other family members. Once your role with the patient has finished, you cannot speak of the patient with anyone else, including your co-workers, in a way that could somehow reveal the patient’s identity. However, you may release information if you have written consent from the patient or the patient’s parent or guardian. In the case of guardianship, you must have proof that the person is the child’s or mentally incapacitated person’s guardian before accepting consent. The confidentiality of information refers not only to identity, but also to any medical issue or treatments that involved the patient, including primary assessments, physical or mental conditions as determined by your assessment, any treatment you provide and any medical history the patient discloses to you. The information should be written but may be given verbally by the patient or patient’s guardian, though it is always better to get this information in writing.\n    </ion-item>\n  </button>\n\n\n  <button ion-item (click)="onPermittedClick()">\n    Permitted Disclosures of PHI Without Written Patient Consent:\n    <ion-item *ngIf="permittedClicked" text-wrap>\n      By law, there are some circumstances when disclosure of PHI is permitted without patient consent. For example, when a patient is provided with emergency care and transported to a hospital or medical center, there are situations where information must be disclosed for payment for services. This information must be relayed to billing departments for the emergency services and the receiving institution. Insurance companies also require a certain amount of information. The information provided should be limited to what is required by law only. Other situations where disclosure without consent is permissible include cases of mandatory reporting, situations involving public health issues and some law enforcement situations. For example, you must provide requested information if you have been legally summoned via a court-ordered subpoena. There are other special situations where disclosure without permission is possible, including the following:\n      - PHI can be disclosed for purposes of research without authorization, under certain conditions.\n      - PHI may be disclosed to report abuse, neglect or domestic violence under specified circumstances.\n      -  A covered entity may disclose PHI in the course of a judicial or an administrative proceeding under specified circumstances.\n      - Organ-procurement agencies may use PHI for the purposes of facilitating a transplant.\n      - Covered entities usually may disclose PHI to a health oversight agency for oversight activities authorized by law.\n      -  The Privacy Rule permits disclosure of work-related health information as authorized by, and to the extent necessary to comply with, workers’ compensation programs. A valid authorization is required for any use or disclosure of PHI that is not required or otherwise permitted without authorization by the Privacy Rule\n    </ion-item>\n  </button>\n\n  <button ion-item (click)="onSpecialClick()">\n    Special Reporting Requirements:\n    <ion-item *ngIf="specialClicked" text-wrap>\n      Mandated reporting usually refers to the practice of reporting situations in which a patient’s injuries may have been caused through battery, abuse or other forms of violence. The requirements for reporting vary from state to state, and it is the EMR’s responsibility to learn and follow specific state requirements for reporting incidents in which abuse is suspected. Abuse or neglect of any kind must be reported in accordance with state requirements; this applies to children, the elderly and patients in domestic violence situations. Injuries that may be the result of a crime, such as gunshot and stab wounds, as well as poisoning or drug-related injuries, must also be reported. In some states, you also must report suspected sexual assaults. Mandatory reporting can also apply to some infectious diseases such as tuberculosis, hepatitis B, HIV and AIDS. Knowing the details of mandatory reporting is necessary to ensure that you do not incur legal liability for failure to report or unauthorized disclosure. You are responsible for fully documenting an objective report of your findings when you deem it necessary. However, most states will offer immunity for any potential liability that may result from reporting, such as slander or defamation of character. The most important things to remember are that you should act in good faith, report only what you know to be factual and avoid any speculation as to what you believe may have occurred or reporting how you feel.\n      A covered entity must obtain a written authorization from the individual, for the use and disclosure of PHI unless the disclosure is to the individual for treatment, payment, or health care operations, or the disclosure falls under one of the specified exceptions.\n      HIPAA privacy rules, specifically 45 CFR §164.512, addresses the uses and disclosures of PHI for which an authorization or an opportunity to agree or object is not required. Specifically:\n      • Section 164.512(a) permits disclosures that are required by law, including statutes and rules\n      • Section 164.512(b) permits a covered entity to disclose PHI to: <i>\n      "A public health authority that is authorized by law to collect or receive such information for the purpose of preventing or controlling disease, injury, or disability, including but not limited to, the reporting of disease, injury, vital events such as birth or death, and the conduct of public health surveillance, public health investigations, and public health interventions; . ..”</i>\n      Under HIPAA, 45 CFR 164.501, public health authority is defined as <i>“an agency or authority of …, a State,  . . ., or a political subdivision of a State ..., that is responsible for public health matters as part of its official mandate.” </i>\n      Therefore, to the extent that a public health authority is authorized by law to collect or receive information for public health purposes, covered entities may disclose PHI to such public health authority without the patient’s authorization.\n    </ion-item>\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/about/about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/about/about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About the App\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n\n  <h2 id=abouttitle>About the App</h2>\n  <p id=abouttext>This is an app to help healthcare providers determine which diseases they are mandated to report.</p>\n\n  <h2>Health Insurance Portability and Accountability Act </h2>\n  <p>Personal information, such as the patient’s medical issues, physical and mental conditions and medications they take, is considered confidential. Confidentiality can be broken only in cases where you must provide this information to medical personnel who will take over care, for mandatory reporting or in certain legal circumstances. </p>\n\n\n  <button ion-item (click)="onDescriptionClick()">\n    What is HIPPA\n    <ion-item *ngIf="descriptionClicked" text-wrap>\n      The Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule is the first comprehensive federal protection for the privacy of protected health information (PHI). It makes provisions for aspects such as patient control over health information, the use and release of health records, appropriate disclosure of health information, and civil and criminal penalties for violation of patients’ privacy rights.\n    </ion-item>\n  </button>\n\n  <button ion-item (click)="onProtectedClick()">\n    Protected Health Information\n    <ion-item *ngIf="protectedClicked" text-wrap>\n      Because of these privacy stipulations, you cannot relay any identifying information about the patient to anyone without the patient’s specific consent. This includes media, employers, colleagues, friends and even other family members. Once your role with the patient has finished, you cannot speak of the patient with anyone else, including your co-workers, in a way that could somehow reveal the patient’s identity. However, you may release information if you have written consent from the patient or the patient’s parent or guardian. In the case of guardianship, you must have proof that the person is the child’s or mentally incapacitated person’s guardian before accepting consent. The confidentiality of information refers not only to identity, but also to any medical issue or treatments that involved the patient, including primary assessments, physical or mental conditions as determined by your assessment, any treatment you provide and any medical history the patient discloses to you. The information should be written but may be given verbally by the patient or patient’s guardian, though it is always better to get this information in writing.\n    </ion-item>\n  </button>\n\n\n  <button ion-item (click)="onPermittedClick()">\n    Permitted Disclosures of PHI Without Written Patient Consent:\n    <ion-item *ngIf="permittedClicked" text-wrap>\n      By law, there are some circumstances when disclosure of PHI is permitted without patient consent. For example, when a patient is provided with emergency care and transported to a hospital or medical center, there are situations where information must be disclosed for payment for services. This information must be relayed to billing departments for the emergency services and the receiving institution. Insurance companies also require a certain amount of information. The information provided should be limited to what is required by law only. Other situations where disclosure without consent is permissible include cases of mandatory reporting, situations involving public health issues and some law enforcement situations. For example, you must provide requested information if you have been legally summoned via a court-ordered subpoena. There are other special situations where disclosure without permission is possible, including the following:\n      - PHI can be disclosed for purposes of research without authorization, under certain conditions.\n      - PHI may be disclosed to report abuse, neglect or domestic violence under specified circumstances.\n      -  A covered entity may disclose PHI in the course of a judicial or an administrative proceeding under specified circumstances.\n      - Organ-procurement agencies may use PHI for the purposes of facilitating a transplant.\n      - Covered entities usually may disclose PHI to a health oversight agency for oversight activities authorized by law.\n      -  The Privacy Rule permits disclosure of work-related health information as authorized by, and to the extent necessary to comply with, workers’ compensation programs. A valid authorization is required for any use or disclosure of PHI that is not required or otherwise permitted without authorization by the Privacy Rule\n    </ion-item>\n  </button>\n\n  <button ion-item (click)="onSpecialClick()">\n    Special Reporting Requirements:\n    <ion-item *ngIf="specialClicked" text-wrap>\n      Mandated reporting usually refers to the practice of reporting situations in which a patient’s injuries may have been caused through battery, abuse or other forms of violence. The requirements for reporting vary from state to state, and it is the EMR’s responsibility to learn and follow specific state requirements for reporting incidents in which abuse is suspected. Abuse or neglect of any kind must be reported in accordance with state requirements; this applies to children, the elderly and patients in domestic violence situations. Injuries that may be the result of a crime, such as gunshot and stab wounds, as well as poisoning or drug-related injuries, must also be reported. In some states, you also must report suspected sexual assaults. Mandatory reporting can also apply to some infectious diseases such as tuberculosis, hepatitis B, HIV and AIDS. Knowing the details of mandatory reporting is necessary to ensure that you do not incur legal liability for failure to report or unauthorized disclosure. You are responsible for fully documenting an objective report of your findings when you deem it necessary. However, most states will offer immunity for any potential liability that may result from reporting, such as slander or defamation of character. The most important things to remember are that you should act in good faith, report only what you know to be factual and avoid any speculation as to what you believe may have occurred or reporting how you feel.\n      A covered entity must obtain a written authorization from the individual, for the use and disclosure of PHI unless the disclosure is to the individual for treatment, payment, or health care operations, or the disclosure falls under one of the specified exceptions.\n      HIPAA privacy rules, specifically 45 CFR §164.512, addresses the uses and disclosures of PHI for which an authorization or an opportunity to agree or object is not required. Specifically:\n      • Section 164.512(a) permits disclosures that are required by law, including statutes and rules\n      • Section 164.512(b) permits a covered entity to disclose PHI to: <i>\n      "A public health authority that is authorized by law to collect or receive such information for the purpose of preventing or controlling disease, injury, or disability, including but not limited to, the reporting of disease, injury, vital events such as birth or death, and the conduct of public health surveillance, public health investigations, and public health interventions; . ..”</i>\n      Under HIPAA, 45 CFR 164.501, public health authority is defined as <i>“an agency or authority of …, a State,  . . ., or a political subdivision of a State ..., that is responsible for public health matters as part of its official mandate.” </i>\n      Therefore, to the extent that a public health authority is authorized by law to collect or receive information for public health purposes, covered entities may disclose PHI to such public health authority without the patient’s authorization.\n    </ion-item>\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/about/about.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], AboutPage);
     return AboutPage;
-    var _a;
 }());
 
 //# sourceMappingURL=about.js.map
@@ -933,7 +932,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Chicago Department of Public Health</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Information on reporting</h2>\n  <p>\n    Search Disease\n  </p>\n\n\n\n  <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="GotoNewPage(item)">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Chicago Department of Public Health</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Information on reporting</h2>\n  <p>\n    Search Disease\n  </p>\n\n\n\n  <ion-searchbar (ionInput)="getItems($event)" ></ion-searchbar>\n  <ion-list>\n    <ion-item *ngFor="let item of items" (click)="GotoNewPage(item)">\n      {{ item }}\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_http__["a" /* HTTP */]])
     ], HomePage);
@@ -952,7 +951,6 @@ var HomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_call_number__ = __webpack_require__(253);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -966,14 +964,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+//import { CallNumber } from '@ionic-native/call-number';
 var NewpagePage = /** @class */ (function () {
-    function NewpagePage(navCtrl, navParams, http, toastCtrl, callNumber) {
+    function NewpagePage(navCtrl, navParams, http, toastCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.http = http;
         this.toastCtrl = toastCtrl;
-        this.callNumber = callNumber;
         this.parser = navParams.get('data');
         this.name = navParams.get('disease');
         this.alt_names = this.parser["data"]["diseases"][this.name]["alt_names"];
@@ -1007,16 +1004,6 @@ var NewpagePage = /** @class */ (function () {
         */
     }
     NewpagePage.prototype.callingNumber = function (telephoneNumber) {
-        this.callNumber.isCallSupported()
-            .then(function (response) {
-            if (response == true) {
-                console.log("worked");
-                this.callNumber.callNumber(telephoneNumber, true);
-            }
-            else {
-                // do nothing
-            }
-        });
     };
     NewpagePage.prototype.afterHoursToast = function () {
         var toast = this.toastCtrl.create({
@@ -1044,24 +1031,25 @@ var NewpagePage = /** @class */ (function () {
     };
     NewpagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-newpage',template:/*ion-inline-start:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid padding>\n    <ion-row padding id="urgency">\n      <b>{{name}} <br>\n      Urgency {{urgency}}</b>\n    </ion-row>\n\n    <ion-row padding id="steps"><b>\n      {{nonurgent_reporting_method}} <br>\n      Steps: <br>\n      <ul>\n        <li (click)="callingNumber(phone_number)">{{phone_number}} </li>\n        <li *ngIf="submit_to_lab != \'N/A\'"> {{submit_to_lab}} </li>\n      </ul></b>\n    </ion-row>\n\n    <ion-row padding id="altnames"><b>\n      Alternate names: {{alt_names}}\n    </b>\n    </ion-row>\n\n    <ion-row id="popups">\n      <button color ="button" ion-button full (click)="afterHoursToast()"> After hours information </button>\n      <!-- <button color ="button" ion-button full (click)="labReqsToast()"> Lab requirements </button> -->\n      <button color ="button" ion-button full (click)="legalToast()"> Does HIPAA allow this? </button>\n      <!-- <button color ="button" ion-button full (click)="showToastWithCloseButton()"> Option 2 </button> -->\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/,
+            selector: 'page-newpage',template:/*ion-inline-start:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-grid padding>\n    <ion-row padding id="urgency">\n      <b>{{name}} <br>\n      Urgency {{urgency}}</b>\n    </ion-row>\n\n    <ion-row padding id="steps"><b>\n      {{nonurgent_reporting_method}} <br>\n      Steps: <br>\n      <ul>\n        <li (click)="callingNumber(phone_number)">{{phone_number}} </li>\n        <li *ngIf="submit_to_lab != \'N/A\'"> {{submit_to_lab}} </li>\n      </ul></b>\n    </ion-row>\n\n    <ion-row padding id="altnames"><b>\n      Alternate names: {{alt_names}}\n    </b>\n    </ion-row>\n\n    <ion-row id="popups">\n      <button color ="button" ion-button full (click)="afterHoursToast()"> After hours information </button>\n      <!-- <button color ="button" ion-button full (click)="labReqsToast()"> Lab requirements </button> -->\n      <button color ="button" ion-button full (click)="legalToast()"> Does HIPAA allow this? </button>\n      <!-- <button color ="button" ion-button full (click)="showToastWithCloseButton()"> Option 2 </button> -->\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/newpage/newpage.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_call_number__["a" /* CallNumber */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_http__["a" /* HTTP */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */]) === "function" && _d || Object])
     ], NewpagePage);
     return NewpagePage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=newpage.js.map
 
 /***/ }),
 
-/***/ 345:
+/***/ 344:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(345);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(349);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1069,7 +1057,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 350:
+/***/ 349:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1077,18 +1065,17 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(387);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(386);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(393);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_newpage_newpage__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(244);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(248);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_http__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_call_number__ = __webpack_require__(253);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_Rx__ = __webpack_require__(395);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_Rx__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_rxjs_Rx__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1107,7 +1094,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
+//import { CallNumber } from '@ionic-native/call-number';
 
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -1141,7 +1128,6 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_11__ionic_native_http__["a" /* HTTP */],
-                __WEBPACK_IMPORTED_MODULE_12__ionic_native_call_number__["a" /* CallNumber */],
                 { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
@@ -1153,7 +1139,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 387:
+/***/ 386:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1188,7 +1174,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/adeladeng/TechTeam-Chicago-Project/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/adeladeng/TechTeam-Chicago-Project/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1199,7 +1185,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 394:
+/***/ 393:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1223,7 +1209,7 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/brohna/Desktop/CS/TechTeam/TechTeam-Chicago-Project/src/pages/contact/contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/contact/contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adeladeng/TechTeam-Chicago-Project/src/pages/contact/contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
     ], ContactPage);
@@ -1234,5 +1220,5 @@ var ContactPage = /** @class */ (function () {
 
 /***/ })
 
-},[345]);
+},[344]);
 //# sourceMappingURL=main.js.map

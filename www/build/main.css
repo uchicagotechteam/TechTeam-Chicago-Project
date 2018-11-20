@@ -25678,6 +25678,18 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-about h2 {
+  text-align: center;
+  background-color: khaki;
+  padding: 10px;
+}
+
+page-about p {
+  color: dimgray;
+  font-size: 120%;
+  margin: 5%;
+}
+
 page-newpage #urgency {
   background-color: #ff0000;
   text-align: center;

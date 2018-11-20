@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HTTP } from '@ionic-native/http';
 import { ToastController } from 'ionic-angular';
-import { CallNumber } from '@ionic-native/call-number';
+//import { CallNumber } from '@ionic-native/call-number';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class NewpagePage {
 
 
   public disease: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HTTP, public toastCtrl: ToastController, private callNumber: CallNumber) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HTTP, public toastCtrl: ToastController) {
     this.parser = navParams.get('data');
     this.name = navParams.get('disease');
 
@@ -58,17 +58,7 @@ export class NewpagePage {
   }
 
   callingNumber(telephoneNumber) {
-    this.callNumber.isCallSupported()
-      .then(function (response) {
-        if (response == true) {
-          console.log("worked");
-          this.callNumber.callNumber(telephoneNumber, true);
-
-        }
-        else {
-          // do nothing
-        }
-      });
+    
   }
 
   afterHoursToast() {

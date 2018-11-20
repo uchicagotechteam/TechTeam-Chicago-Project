@@ -8,24 +8,23 @@
 
 
 <ion-content>
-  <h2>Health Insurance Portability and Accountability Act</h2>
 
-  <h1>About the App </h1>
-  <p>This is an app for healthcare providers to help them determine which diseases they are mandated to report</p>
+  <h2 id=abouttitle>About the App</h2>
+  <p id=abouttext>This is an app to help healthcare providers determine which diseases they are mandated to report.</p>
 
-  <h2> About HIPPA </h2>
+  <h2>Health Insurance Portability and Accountability Act </h2>
   <p>Personal information, such as the patient’s medical issues, physical and mental conditions and medications they take, is considered confidential. Confidentiality can be broken only in cases where you must provide this information to medical personnel who will take over care, for mandatory reporting or in certain legal circumstances. </p>
 
 
   <button ion-item (click)="onDescriptionClick()">
-    Description:
+    What is HIPPA
     <ion-item *ngIf="descriptionClicked" text-wrap>
       The Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule is the first comprehensive federal protection for the privacy of protected health information (PHI). It makes provisions for aspects such as patient control over health information, the use and release of health records, appropriate disclosure of health information, and civil and criminal penalties for violation of patients’ privacy rights.
     </ion-item>
   </button>
 
   <button ion-item (click)="onProtectedClick()">
-    Protected Health Information:
+    Protected Health Information
     <ion-item *ngIf="protectedClicked" text-wrap>
       Because of these privacy stipulations, you cannot relay any identifying information about the patient to anyone without the patient’s specific consent. This includes media, employers, colleagues, friends and even other family members. Once your role with the patient has finished, you cannot speak of the patient with anyone else, including your co-workers, in a way that could somehow reveal the patient’s identity. However, you may release information if you have written consent from the patient or the patient’s parent or guardian. In the case of guardianship, you must have proof that the person is the child’s or mentally incapacitated person’s guardian before accepting consent. The confidentiality of information refers not only to identity, but also to any medical issue or treatments that involved the patient, including primary assessments, physical or mental conditions as determined by your assessment, any treatment you provide and any medical history the patient discloses to you. The information should be written but may be given verbally by the patient or patient’s guardian, though it is always better to get this information in writing.
     </ion-item>
