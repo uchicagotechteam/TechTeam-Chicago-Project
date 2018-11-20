@@ -6,12 +6,29 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'about.html'
 })
 export class AboutPage {
-  public buttonClicked: boolean = false; //Whatever you want to initialise it as
+  public descriptionClicked: boolean = false;
+  public protectedClicked: boolean = false;
+  public permittedClicked: boolean = false;
+  public specialClicked: boolean = false;
 
-  public onButtonClick() {
 
-    this.buttonClicked = !this.buttonClicked;
+  public onDescriptionClick() {
+    this.descriptionClicked = !this.descriptionClicked;
   }
+
+  public onProtectedClick() {
+    this.protectedClicked = !this.protectedClicked;
+  }
+
+  public onPermittedClick() {
+    this.permittedClicked = !this.permittedClicked;
+  }
+
+  public onSpecialClick() {
+    this.specialClicked = !this.specialClicked;
+  }
+
+
 
   constructor(public navCtrl: NavController) {
 
