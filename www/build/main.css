@@ -25690,6 +25690,10 @@ page-about p {
   margin: 5%;
 }
 
+page-about ion-title {
+  text-align: center;
+}
+
 page-newpage #urgency {
   background-color: #ff0000;
   text-align: center;
