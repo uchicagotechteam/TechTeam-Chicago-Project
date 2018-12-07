@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
+    "id": "call-number.CallNumber",
+    "file": "plugins/call-number/www/CallNumber.js",
+    "pluginId": "call-number",
+    "clobbers": [
+      "call"
+    ]
+  },
+  {
     "id": "cordova-plugin-file.DirectoryEntry",
     "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
     "pluginId": "cordova-plugin-file",
@@ -255,28 +263,20 @@ module.exports = [
     "clobbers": [
       "window.StatusBar"
     ]
-  },
-  {
-    "id": "mx.ferreyra.callnumber.CallNumber",
-    "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
-    "pluginId": "mx.ferreyra.callnumber",
-    "clobbers": [
-      "call"
-    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+  "call-number": "0.0.2",
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-advanced-http": "1.11.1",
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-ionic-keyboard": "2.0.5",
   "cordova-plugin-ionic-webview": "1.2.1",
   "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-statusbar": "2.4.2",
-  "mx.ferreyra.callnumber": "0.0.2"
+  "cordova-plugin-whitelist": "1.3.3"
 };
 // BOTTOM OF METADATA
 });

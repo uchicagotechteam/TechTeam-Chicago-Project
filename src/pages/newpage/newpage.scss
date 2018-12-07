@@ -1,7 +1,7 @@
 page-newpage {
-  #urgency{
+  .urgency{
     background-color: #ff0000;
-    text-align: center;
+    text-align: left;
     font-size: 20pt;
   }
 
@@ -13,9 +13,9 @@ page-newpage {
     background-color: #4186c4;
   }
 
-  // ion-content{
-  //     margin: 10px;
-  // }
+  div {
+    display: inline-block;
+  }
 
   ion-row{
     color: white;

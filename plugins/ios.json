@@ -1,40 +1,40 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "call-number": {
+      "PACKAGE_NAME": "ChicagoMedReport"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "ChicagoMedReport"
     },
-    "installed_plugins": {
-        "cordova-plugin-advanced-http": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "cordova-plugin-ionic-keyboard": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "cordova-plugin-ionic-webview": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        },
-        "mx.ferreyra.callnumber": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        }
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "ChicagoMedReport"
     },
-    "dependent_plugins": {
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "ChicagoMedReport"
-        }
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "ChicagoMedReport"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "ChicagoMedReport"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "ChicagoMedReport"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "ChicagoMedReport"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "ChicagoMedReport"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "ChicagoMedReport"
+    }
+  }
 }

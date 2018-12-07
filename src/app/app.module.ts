@@ -5,7 +5,6 @@ import { MyApp } from './app.component';
 
 
 import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -14,8 +13,7 @@ import { NewpagePage } from "../pages/newpage/newpage";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HTTP } from '@ionic-native/http';
-//import { CallNumber } from '@ionic-native/call-number';
-
+import { CallNumber } from '@ionic-native/call-number';
 
 import 'rxjs/Rx';
 
@@ -24,7 +22,6 @@ import 'rxjs/Rx';
   declarations: [
     MyApp,
     AboutPage,
-    ContactPage,
     HomePage,
     TabsPage,
     NewpagePage
@@ -37,7 +34,6 @@ import 'rxjs/Rx';
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
     HomePage,
     TabsPage,
     NewpagePage
@@ -45,6 +41,7 @@ import 'rxjs/Rx';
   providers: [
     StatusBar,
     SplashScreen,
+    CallNumber,
     HTTP,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
