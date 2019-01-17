@@ -4872,10 +4872,6 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
-textarea:-ms-input-placeholder {
-  padding-left: 2px;
-}
-
 textarea::-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -25678,9 +25674,25 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-newpage #urgency {
-  background-color: #ff0000;
+page-about h2 {
   text-align: center;
+  background-color: khaki;
+  padding: 10px;
+}
+
+page-about p {
+  color: dimgray;
+  font-size: 120%;
+  margin: 5%;
+}
+
+page-about ion-title {
+  text-align: center;
+}
+
+page-newpage .urgency {
+  background-color: #ff0000;
+  text-align: left;
   font-size: 20pt;
 }
 
@@ -25690,6 +25702,10 @@ page-newpage #steps {
 
 page-newpage #altnames {
   background-color: #4186c4;
+}
+
+page-newpage div {
+  display: inline-block;
 }
 
 page-newpage ion-row {

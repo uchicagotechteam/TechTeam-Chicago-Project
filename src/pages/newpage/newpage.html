@@ -1,23 +1,30 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      {{name}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-grid padding>
-    <ion-row padding id="urgency">
-      <b>{{name}} <br>
-      Urgency {{urgency}}</b>
+    <ion-row padding class="urgency">
+      <b>{{name}} </b>
     </ion-row>
+    <ion-row padding class="urgency">
+      <b>Urgency: {{urgency}}</b>
+    </ion-row>
+
 
     <ion-row padding id="steps"><b>
       {{nonurgent_reporting_method}} <br>
       Steps: <br>
       <ul>
-        <li (click)="callingNumber(phone_number)">{{phone_number}} </li>
+        <li>{{phone_number[0]}}:
+          <div *ngFor="let number of phone_number.slice(1)">
+            <a href="tel:{{turnNumber(number)}}"> {{number}} </a> &nbsp;
+          </div>
+        </li>
         <li *ngIf="submit_to_lab != 'N/A'"> {{submit_to_lab}} </li>
       </ul></b>
     </ion-row>
@@ -28,10 +35,8 @@
     </ion-row>
 
     <ion-row id="popups">
-      <button color ="button" ion-button full (click)="afterHoursToast()"> After hours information </button>
-      <!-- <button color ="button" ion-button full (click)="labReqsToast()"> Lab requirements </button> -->
-      <button color ="button" ion-button full (click)="legalToast()"> Does HIPAA allow this? </button>
-      <!-- <button color ="button" ion-button full (click)="showToastWithCloseButton()"> Option 2 </button> -->
+      <button color ="button" ion-button full (click)="afterHoursToast()" [disabled]="disableButton"> After hours information </button>
+      <button color ="button" ion-button full (click)="legalToast()" [disabled]="disableButton2"> Does HIPAA allow this? </button>
     </ion-row>
   </ion-grid>
 

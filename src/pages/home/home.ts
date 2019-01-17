@@ -483,7 +483,7 @@ export class HomePage {
                 "resistant organism"
               ],
               "urgency_i": 2,
-              "phone_number_i": 7,
+              "phone_number_i": 1,
               "submit_to_lab": 0
             },
             "Gonorrhea": {
@@ -734,19 +734,18 @@ export class HomePage {
             }
           },
           "phone_numbers": [
-            "Communicable Disease Surveillance: (312) 746-5925 or (312) 746-5377",
-            "Communicable Disease Hepatitis Surveillance: (312) 746-6197",
-            "Sexually Transmitted Infection (STI) Surveillance: (312) 747-0697 \nSexually Transmitted Infection Surveillance Fax: (312) 745-7627",
-            "Vaccine Preventable Disease Surveillance: (312) 746-5911/5901",
-            "Tuberculosis Surveillance: (312) 746-6013; Fax (312) 746-5134",
-            "HIV/AIDS Surveillance: (312) 747-9614",
-            "N/A",
-            "Communicable Disease Surveillance: (312) 746-5925 or (312) 746-5377 \nSexually Transmitted Infection (STI) Surveillance: (312) 747-0697 \nSexually Transmitted Infection Surveillance Fax: (312) 745-7627"
+            ["Communicable Disease Surveillance", "(312) 746-5925", "(312) 746-5377"],
+            ["Communicable Disease Hepatitis Surveillance", "(312) 746-6197"],
+            ["Sexually Transmitted Infection (STI) Surveillance", "(312) 747-0697"],
+            ["Vaccine Preventable Disease Surveillance", "(312) 746-5911"],
+            ["Tuberculosis Surveillance", "(312) 746-6013"],
+            ["HIV/AIDS Surveillance", "(312) 747-9614"],
+            ["N/A", ""]
           ],
           "urgency_levels": [
-            "Immediate (within 3 hours by phone)",
-            "24-Hours",
-            "7 days"
+            "Immediate (3 Hours by Phone)",
+            "24 Hours",
+            "7 Days"
           ]
         }
       };
@@ -757,27 +756,11 @@ export class HomePage {
       for (var j=0; j<this.parser["data"]["diseases"][this.allItems[i]]["alt_names"].length; j++){
         disease.push(this.parser["data"]["diseases"][this.allItems[i]]["alt_names"][j]);
       }
-      this.includeAltNames.push(disease);
     }
     this.items = this.allItems.sort();
     //puts public health hazard on top
     this.items.splice(this.items.indexOf("Any Public Health Hazard"), 1);
     this.items.unshift("Any Public Health Hazard");
-
-    /*
-    this.http.get('assets/data.json', {}, {})
-      .then(data => {
-        this.allItems = Object.keys(JSON.parse(data.data)["data"]["diseases"]);
-        this.items = this.allItems.sort();
-      })
-      .catch(error => {
-        console.log("fails");
-        console.log(error.status);
-        console.log(error.error); // error message as string
-        console.log(error.headers);
-
-      });
-    */
 
   }
 
