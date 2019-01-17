@@ -49,7 +49,7 @@ export class NewpagePage {
       this.callNumber.isCallSupported()
         .then(function (response) {
           if (response == true) {
-            var number = "1"+telephoneNumber.replace(/\D/g, '');
+            var number = "1"+(telephoneNumber.replace(/\D/g, ''));
             this.callNumber.callNumber(number, true)
               .then(res => console.log('Launched dialer!', res))
               .catch(err => console.log('Error launching dialer', err));
@@ -61,7 +61,7 @@ export class NewpagePage {
   }
 
   turnNumber(number:string){
-    var num = "1"+number.replace(/\D/g, '');
+    var num = "1"+(number.replace(/\D/g, ''));
     return num;
   }
 

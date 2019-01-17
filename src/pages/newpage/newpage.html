@@ -21,9 +21,8 @@
       Steps: <br>
       <ul>
         <li>{{phone_number[0]}}:
-          <div *ngFor="let number of phone_number.slice(1)" (click)="callingNumber(number)">
-            {{number}} &nbsp;
-            <!--<a href="tel:{{turnNumber(number)}}"> {{number}} </a> &nbsp;-->
+          <div *ngFor="let number of phone_number.slice(1)">
+            <a href="tel:{{turnNumber(number)}}"> {{number}} </a> &nbsp;
           </div>
         </li>
         <li *ngIf="submit_to_lab != 'N/A'"> {{submit_to_lab}} </li>
